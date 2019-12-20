@@ -1,0 +1,11 @@
+{
+    "name": "func",
+    "description": "cloud function for firebase",
+    "dependencies": {
+        "firebase-admin" : "~5.2.1",
+        "firebase-functions" : "3.3.0",
+        "node-fetch" : "2.6.0",
+        "package" : "./test-4bd9d-firebase-adminsdk-x1dmh-24868267c0.json"
+    },
+    "private" : true
+}
