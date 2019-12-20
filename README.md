@@ -13,6 +13,10 @@ Member1 : Samyak Jain | Member2 : Abhi Parmar
 Flutter is an open-source UI software development kit created by Google. It is used to develop applications for Android, iOS, Windows, Mac, Linux, Google Fuchsia and the web.
 We have used flutter as our Developement SDK on Dart programming Language
 
+### Javascript
+![alt text](https://www.tutorialrepublic.com/lib/images/javascript-illustration.png)
+JavaScript, often abbreviated as JS, is a high-level, just-in-time compiled, object-oriented programming language that conforms to the ECMAScript specification. The backend of our code is written in JavaScript and exchange of data between the server and app is in JSON Format.
+
 ### Flutter Location Plugin pub package version 2.3.5
 Live streams Agents location and customer location upon requests with efficient battery saving systems and maximum accuracy.
 ### Firebase Firestore
