@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:location/location.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'userlocation.dart';
+import 'dart:convert';
+import 'dart:io';
+import 'package:json_annotation/json_annotation.dart';
+
+@JsonSerializable()
 
 void main() => runApp(MyApp());
 
@@ -25,6 +30,23 @@ class HomePage extends StatelessWidget {
   final databaseReference = Firestore.instance;
 
   UserLocation _currentLocation;
+  callfunction() async {
+    var url = 'https://us-central1-oppofintech-261706.cloudfunctions.net/someMethod';
+    var httpClient = new HttpClient();
+
+
+    var request = await httpClient.getUrl(Uri.parse(url));
+    var response = await request.close();
+    if (response.statusCode == HttpStatus.ok) {
+      Map userMap = jsonDecode(response.toString());
+      var user = Locations.fromJson(userMap);
+      print(user);
+
+    } else {
+
+    }
+
+  }
 
   Future<UserLocation> getLocation() async {
     try {
@@ -56,7 +78,6 @@ class HomePage extends StatelessWidget {
           .updateData({
         'lat' : currentLocation.latitude,
         'long': currentLocation.longitude,
-        'user': userID
       });
 
     });
@@ -87,18 +108,44 @@ class HomePage extends StatelessWidget {
       ),
       body: Container(
         padding: EdgeInsets.all(50),
-        child: RaisedButton(
-          child: Text('Begin'),
-          color: Colors.amber,
-
-          onPressed: (){
-            getLocation();
-            createRecord();
-            updateRecord();
-          },
+        child: Column(
+          children: <Widget>[
+            RaisedButton(
+              child: Text('Agent'),
+              color: Colors.amber,
+              onPressed: (){
+                getLocation();
+                createRecord();
+                updateRecord();
+              },
+            ),
+            RaisedButton(
+              child: Text('customer'),
+              color: Colors.amber,
+              onPressed: callfunction,
+            )
+          ],
         ),
       ),
     );
   }
 
+}
+class Locations {
+  int id;
+  String name;
+
+  Locations({this.id, this.name});
+
+  Locations.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    name = json['name'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['id'] = this.id;
+    data['name'] = this.name;
+    return data;
+  }
 }
