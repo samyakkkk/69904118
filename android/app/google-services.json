@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "217531820665",
+    "firebase_url": "https://oppofintech-261706.firebaseio.com",
+    "project_id": "oppofintech-261706",
+    "storage_bucket": "oppofintech-261706.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217531820665:android:1eb906317100e03bd0c2a8",
+        "android_client_info": {
+          "package_name": "com.samyak.location_package"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217531820665-ofclimd0rm1s8lg5s9bk6eeoookanbrr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYFHrrVM-Pi6JwPp1xtnol3cV7FuRLTzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "217531820665-ofclimd0rm1s8lg5s9bk6eeoookanbrr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217531820665:android:bcb1e383afa4caf0d0c2a8",
+        "android_client_info": {
+          "package_name": "com.samyak.trackandassign"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217531820665-ofclimd0rm1s8lg5s9bk6eeoookanbrr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYFHrrVM-Pi6JwPp1xtnol3cV7FuRLTzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "217531820665-ofclimd0rm1s8lg5s9bk6eeoookanbrr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
