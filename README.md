@@ -20,7 +20,7 @@ Live streams Agents location and customer location upon requests with efficient 
 Realtime location of Active agents is constantly updated on Firestore's NoSql Databases.
 
 ### Google Distant Matrix API
-![alt text](https://www.ditoweb.com/wp-content/uploads/2016/05/distance-matrix-api.png).
+[alt text](https://docs.mapbox.com/help/img/directions/matrix.png)
 The Distance Matrix API is a service that provides travel distance and time for a matrix of origins and destinations. The API returns information based on the recommended route between start and end points, as calculated by the Google Maps API, and consists of rows containing duration and distance values for each pair.
 
 Distance of agents from the customer is calculated and the nearest agents sorted by time is assigned
